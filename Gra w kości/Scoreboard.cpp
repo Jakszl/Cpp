@@ -15,12 +15,12 @@
 
 using namespace std;
 
-//Klasa Scoreboard opisuj¹ca nasz¹ tablice wyników i funkcje pomocnicze do niej
+//Klasa Scoreboard opisujÄ…ca naszÄ… tablice wynikÃ³w i funkcje pomocnicze do niej
 
 Scoreboard::Scoreboard(string playerName)
 {
-    name = playerName;                      //Zmienne opisuj¹ce dane wyniki dla ró¿nych kombinacji koœci
-	aces = -1;                              //Domyœlnie ustawione s¹ na -1, ¿eby unikn¹æ wpisywania ponownego gdy ju¿ raz wybierzemy dan¹ opcje
+    name = playerName;                      //Zmienne opisujÄ…ce dane wyniki dla rÃ³Å¼nych kombinacji koÅ›ci
+	aces = -1;                              //DomyÅ›lnie ustawione sÄ… na -1, Å¼eby uniknÄ…Ä‡ wpisywania ponownego gdy juÅ¼ raz wybierzemy danÄ… opcje
 	twos = -1;
 	threes = -1;
 	fours = -1;
@@ -34,14 +34,14 @@ Scoreboard::Scoreboard(string playerName)
 	yahtzee = -1;
 	chance = -1;
 }
-int Scoreboard::getTotalScore() {           //Funkcja do sumowania ca³ego wyniku dla konkretnego gracza na koniec rozgrywki
+int Scoreboard::getTotalScore() {           //Funkcja do sumowania caÅ‚ego wyniku dla konkretnego gracza na koniec rozgrywki
 	int total = 0;
 	total = aces + twos + threes + fours + fives + sixes + threeKind + fourKind + fullHouse + smallStrt + largeStrt + yahtzee + chance;
 	return total;
 }
-int Scoreboard::setScore(int selection, int score) {        //G³ówna funkcja, dziêki której jesteœmy w stanie przypisywaæ dane wyniki do konkretnych u³o¿eñ na tablicy
-	switch (selection) {                                    //Posiada ona równie¿ zabezpieczenie przed ponownym wpisaniem wartoœci w nasze pole
-	case 1:                                                 //Gdy ktoœ spróbuje wpisaæ coœ w zajête pole, funkcja zwraca -1
+int Scoreboard::setScore(int selection, int score) {        //GÅ‚Ã³wna funkcja, dziÄ™ki ktÃ³rej jesteÅ›my w stanie przypisywaÄ‡ dane wyniki do konkretnych uÅ‚oÅ¼eÅ„ na tablicy
+	switch (selection) {                                    //Posiada ona rÃ³wnieÅ¼ zabezpieczenie przed ponownym wpisaniem wartoÅ›ci w nasze pole
+	case 1:                                                 //Gdy ktoÅ› sprÃ³buje wpisaÄ‡ coÅ› w zajÄ™te pole, funkcja zwraca -1
 	    if(aces == -1){
             aces = score;
             return 0;
@@ -175,7 +175,7 @@ int Scoreboard::setScore(int selection, int score) {        //G³ówna funkcja, dz
 	}
 }
 
-void Scoreboard::printScoreboard() {                                        //Funkcja do wypisywania tablicy wyników po rzucie oraz po wpisaniu do niej wartoœci
+void Scoreboard::printScoreboard() {                                        //Funkcja do wypisywania tablicy wynikÃ³w po rzucie oraz po wpisaniu do niej wartoÅ›ci
 	cout << "\n\n\t\tGracz " << name << " Tablica wynikow\n";
 	cout << "\n 1) Jedynki: "<< check(aces) <<"\n 2) Dwojki: "<< check(twos) <<"\n 3) Trojki: "<<check(threes);
 	cout << "\n 4) Czworki: "<<check(fours) <<"\n 5) Piatki: "<<check(fives) <<"\n 6) Szostki: "<<check(sixes);
@@ -183,8 +183,8 @@ void Scoreboard::printScoreboard() {                                        //Fu
     cout << "\n 10) Maly strit: "<<check(smallStrt)<<"\n 11) Duzy strit: "<<check(largeStrt)<<"\n 12) General: "<<check(yahtzee);
 	cout << "\n 13) Szansa: "<<check(chance);
 }
-string Scoreboard::check(int inty) {            //Funkcja, która sprawdza stan naszych pól przy wypisywaniu funkcji printScoreboard
-	if (inty == -1) {                           //Gdy gracz nic nie wpisa³ do danego pola wypisywane jest puste pole, w przeciwnym wypadku wynik
+string Scoreboard::check(int inty) {            //Funkcja, ktÃ³ra sprawdza stan naszych pÃ³l przy wypisywaniu funkcji printScoreboard
+	if (inty == -1) {                           //Gdy gracz nic nie wpisaÅ‚ do danego pola wypisywane jest puste pole, w przeciwnym wypadku wynik
 		return " ";
 	}
 	else {
