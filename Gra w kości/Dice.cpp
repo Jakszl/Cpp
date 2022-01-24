@@ -20,7 +20,7 @@ Dice::Dice(int Number)
 {
     this->Number = Number;
 }
-void Dice::rollOne()            //Funkcja s³u¿¹ca do rzucania jedn¹ koœci¹ w zale¿noœci czy chcemy j¹ zostawiæ czy te¿ nie
+void Dice::rollOne()            //Funkcja sÂ³uÂ¿Â¹ca do rzucania jednÂ¹ koÅ“ciÂ¹ w zaleÂ¿noÅ“ci czy chcemy jÂ¹ zostawiÃ¦ czy teÂ¿ nie
         {
             if(GetChange()== true)
                 Setscore(Getscore());
