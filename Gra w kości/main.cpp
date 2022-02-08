@@ -214,7 +214,7 @@ int main()
                     d5.SetChange(false);
                     cin>>opt;
                 }
-                int opt2[opt.length()];
+                int * opt2 = new int[opt.length()];
                 opt2[i] = opt[i] - '0';
                 switch(opt2[i]){
                 case 1:
@@ -240,6 +240,7 @@ int main()
                     d5.SetChange(false);
                     break;
                 }
+		delete[] opt2;    
             }
             }
             }
