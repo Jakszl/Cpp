@@ -22,7 +22,7 @@ using namespace std;
 int main()
 {
     srand(time(NULL));
-    const int TURN = 3, ROUNDS = 1;
+    const int TURN = 3, ROUNDS = 13;
 	int round = 0;
 	char numPlayer = ' ';
 	string playerName;
